@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'GRSON 3',
+        title: 'GRSON',
         theme: ThemeData(
           fontFamily: 'OpenSans', 
           primaryColor: kPrimaryColor, 
