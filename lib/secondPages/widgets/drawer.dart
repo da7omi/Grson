@@ -105,8 +105,9 @@ class ArgonDrawer extends StatelessWidget {
                     );
                   },
                   iconColor: ArgonColors.primary,
-                  title: "signout",
-                  isSelected: currentPage == "LoginScreen" ? true : false),
+                  title: "Sign Out",
+                  // isSelected: currentPage == "WelcomeScreen" ? true : false
+                  ),
             ],
           ),
         ),
