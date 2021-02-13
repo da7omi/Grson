@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'GRSON',
+        title: 'GRSON 2',
         theme: ThemeData(
           fontFamily: 'OpenSans', 
           primaryColor: kPrimaryColor, 
-          scaffoldBackgroundColor: Colors.white
+          scaffoldBackgroundColor: Colors.black
            ) ,
           
         
