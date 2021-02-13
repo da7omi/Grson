@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
   final Widget child;
-  const Background({
+  final String page;
+  Background({
     Key key,
     @required this.child,
+    this.page='',
   }) : super(key: key);
 
   @override
@@ -30,14 +32,7 @@ class Background extends StatelessWidget {
             child: IconButton(
               icon: Icon(Icons.arrow_back_ios, size: 55),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return WelcomeScreen();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, page);
               },
             ),
             width: size.width * 0.25,
@@ -45,9 +40,9 @@ class Background extends StatelessWidget {
           ),
           Positioned(
             bottom: 0,
-            left: 0,
-            child: Image.asset("assets/images_welcomepages/main_bottom.png",
-                width: size.width * 0.25, color: Colors.blue[200]),
+            right: 0,
+            child: Image.asset("assets/images_welcomepages/login_bottom.png",
+                width: size.width * 0.4, color: Colors.blue[200]),
           ),
           child,
         ],

@@ -8,6 +8,8 @@ import 'package:GRSON/welcomepages/components/rounded_button.dart';
 import 'package:GRSON/welcomepages/components/rounded_input_email_field.dart';
 import 'package:GRSON/welcomepages/components/rounded_input_person_field.dart';
 import 'package:GRSON/welcomepages/components/rounded_password_field.dart';
+
+import 'package:GRSON/welcomepages/signup/components/email_validation.dart';
 // import 'package:GRSON/secondpages/screens/home.dart';
 
 class Body extends StatelessWidget {
@@ -15,6 +17,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
+      page:'WelcomePage',//this is for back button
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,20 +44,15 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGN UP",
-              press: () {},
+              press: () {
+                Navigator.pushReplacementNamed(context, 'Verify Email' );
+              },
             ),
             SizedBox(height: size.height * 0.02),
             AlreadyHaveAnAccountCheck(
               login: false,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, 'Sign In' );
               },
             ),
             SizedBox(height: size.height * 0.01),

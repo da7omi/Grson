@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:GRSON/welcomepages/signin/login_screen.dart';
-import 'package:GRSON/welcomepages/Signup/signup_screen.dart';
+// import 'package:GRSON/welcomepages/signin/login_screen.dart';
+// import 'package:GRSON/welcomepages/Signup/signup_screen.dart';
 import 'package:GRSON/welcomepages/welcome/components/background.dart';
 import 'package:GRSON/welcomepages/components/rounded_button.dart';
 import 'package:GRSON/welcomepages/constants.dart';
 // import 'package:flutter_svg/svg.dart';
-import 'package:GRSON/secondpages/screens/home.dart';
+// import 'package:GRSON/secondpages/screens/home.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -34,14 +34,7 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "SIGN IN",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, 'Sign In' );
               },
             ),
             RoundedButton(
@@ -49,14 +42,7 @@ class Body extends StatelessWidget {
               // color: kPrimaryLightColor,
               // textColor: Colors.black,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUpScreen();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, 'Sign Up' );
               },
             ),
             RoundedButton(
@@ -64,14 +50,7 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Home();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, '/home' );
               },
             )
             // ]))

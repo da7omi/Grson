@@ -17,6 +17,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
+      page:'WelcomePage',
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,19 +37,16 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGN IN",
-              press: () {},
+              press: () {
+                Navigator.pushReplacementNamed(context, 'WelcomePage');
+                //change this
+              },
             ),
             SizedBox(height: size.height * 0.02),
             FirgetPassword(
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Home();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, 'WelcomePage');
+                //change this
               },
             ),
             SizedBox(height: size.height * 0.01),

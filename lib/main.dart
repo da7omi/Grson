@@ -1,5 +1,8 @@
 // import 'package:GRSON/anothor/main.dart';
 
+import 'package:GRSON/welcomePages/Signin/login_screen.dart';
+import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
+import 'package:GRSON/welcomePages/Signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 // import 'dart:async';
 // screens
@@ -16,18 +19,16 @@ import 'package:GRSON/welcomePages/constants.dart';
 // import 'package:GRSON/details_page.dart';
 
 void main() => runApp(MyApp());
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'GRSON',
         theme: ThemeData(
-          fontFamily: 'OpenSans', 
-          primaryColor: kPrimaryColor, 
-          scaffoldBackgroundColor: Colors.white
-           ) ,
-          
-        
+            fontFamily: 'OpenSans',
+            primaryColor: kPrimaryColor,
+            scaffoldBackgroundColor: Colors.white),
         initialRoute: "/onboarding",
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
@@ -39,6 +40,13 @@ class MyApp extends StatelessWidget {
           "/elements": (BuildContext context) => new Elements(),
           "/account": (BuildContext context) => new Register(),
           // "/homepage": (BuildContext context) => new WelcomeScreen(),
+
+
+          //WelcomePages
+          "WelcomePage": (BuildContext context) => new WelcomeScreen(),
+          "Sign Up": (BuildContext context) => new SignUpScreen(),
+          'Sign In': (BuildContext context) => new LoginScreen(),
+          'Verify Email': (BuildContext context) => new VerifyEmail(),
         });
   }
 }
