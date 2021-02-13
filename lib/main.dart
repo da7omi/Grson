@@ -1,5 +1,4 @@
 // import 'package:GRSON/anothor/main.dart';
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 // import 'dart:async';
@@ -21,11 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'GRSON 2',
+        title: 'GRSON',
         theme: ThemeData(
           fontFamily: 'OpenSans', 
           primaryColor: kPrimaryColor, 
-          scaffoldBackgroundColor: Colors.black
+          scaffoldBackgroundColor: Colors.white
            ) ,
           
         
