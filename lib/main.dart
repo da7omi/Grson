@@ -1,4 +1,6 @@
 // import 'package:GRSON/anothor/main.dart';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 // import 'dart:async';
 // screens
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Argon PRO Flutter',
+        title: 'GRSON',
         theme: ThemeData(
           fontFamily: 'OpenSans', 
           primaryColor: kPrimaryColor, 
