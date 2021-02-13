@@ -1,3 +1,4 @@
+import 'package:GRSON/welcomePages/Signin/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -71,24 +72,40 @@ class ArgonDrawer extends StatelessWidget {
                   iconColor: ArgonColors.info,
                   title: "Account",
                   isSelected: currentPage == "Account" ? true : false),
+              // DrawerTile(
+              //     icon: Icons.settings_input_component,
+              //     onTap: () {
+              //       if (currentPage != "Elements")
+              //         Navigator.pushReplacementNamed(context, '/elements');
+              //     },
+              //     iconColor: ArgonColors.error,
+              //     title: "Elements",
+              //     isSelected: currentPage == "Elements" ? true : false),
+              // DrawerTile(
+              //     icon: Icons.apps,
+              //     onTap: () {
+              //       if (currentPage != "Articles")
+              //         Navigator.pushReplacementNamed(context, '/articles');
+              //     },
+              //     iconColor: ArgonColors.primary,
+              //     title: "Articles",
+              //     isSelected: currentPage == "Articles" ? true : false),
               DrawerTile(
-                  icon: Icons.settings_input_component,
+                  icon: Icons.logout,
                   onTap: () {
-                    if (currentPage != "Elements")
-                      Navigator.pushReplacementNamed(context, '/elements');
-                  },
-                  iconColor: ArgonColors.error,
-                  title: "Elements",
-                  isSelected: currentPage == "Elements" ? true : false),
-              DrawerTile(
-                  icon: Icons.apps,
-                  onTap: () {
-                    if (currentPage != "Articles")
-                      Navigator.pushReplacementNamed(context, '/articles');
+                    // if (currentPage != "login_screen")
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LoginScreen();
+                        },
+                      ),
+                    );
                   },
                   iconColor: ArgonColors.primary,
-                  title: "Articles",
-                  isSelected: currentPage == "Articles" ? true : false),
+                  title: "signout",
+                  isSelected: currentPage == "LoginScreen" ? true : false),
             ],
           ),
         ),
