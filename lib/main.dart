@@ -30,11 +30,11 @@ class MyApp extends StatelessWidget {
             fontFamily: 'OpenSans',
             primaryColor: kPrimaryColor,
             scaffoldBackgroundColor: Colors.white),
-        initialRoute: "/onboarding",
+        initialRoute: "WelcomePage",
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
           // "/onboarding": (BuildContext context) => new Onboarding(),
-          "/onboarding": (BuildContext context) => new WelcomeScreen(),
+          // "/onboarding": (BuildContext context) => new WelcomeScreen(),
           "/home": (BuildContext context) => new Home(),
           "/profile": (BuildContext context) => new Profile(),
           "/articles": (BuildContext context) => new Articles(),

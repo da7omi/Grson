@@ -6,7 +6,7 @@ import 'package:GRSON/welcomepages/components/already_have_account.dart';
 import 'package:GRSON/welcomepages/components/rounded_button.dart';
 import 'package:GRSON/welcomepages/components/rounded_input_email_field.dart';
 import 'package:GRSON/welcomepages/components/rounded_password_field.dart';
-import 'package:GRSON/secondpages/screens/home.dart';
+// import 'package:GRSON/secondpages/screens/home.dart';
 
 class Body extends StatelessWidget {
   const Body({
