@@ -42,7 +42,6 @@ class MyApp extends StatelessWidget {
           "/account": (BuildContext context) => new Register(),
           // "/homepage": (BuildContext context) => new WelcomeScreen(),
 
-
           //WelcomePages
           "WelcomePage": (BuildContext context) => new WelcomeScreen(),
           "Sign Up": (BuildContext context) => new SignUpScreen(),
