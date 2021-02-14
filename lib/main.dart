@@ -1,7 +1,8 @@
 // import 'package:GRSON/anothor/main.dart';
 
+import 'package:GRSON/welcomePages/Signin/components/forgot_password.dart';
 import 'package:GRSON/welcomePages/Signin/login_screen.dart';
-import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
+// import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
 import 'package:GRSON/welcomePages/Signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 // import 'dart:async';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
           "WelcomePage": (BuildContext context) => new WelcomeScreen(),
           "Sign Up": (BuildContext context) => new SignUpScreen(),
           'Sign In': (BuildContext context) => new LoginScreen(),
-          'Verify Email': (BuildContext context) => new VerifyEmail(),
+          'Forgot Password': (BuildContext context) => new ForgotPassword(),
         });
   }
 }

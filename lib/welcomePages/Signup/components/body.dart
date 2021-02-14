@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "SIGN UP",
               press: () {
-                Navigator.pushReplacementNamed(context, 'Verify Email' );
+                Navigator.pushReplacementNamed(context, 'WelcomePage' );
               },
             ),
             SizedBox(height: size.height * 0.02),

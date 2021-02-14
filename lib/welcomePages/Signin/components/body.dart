@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.02),
             FirgetPassword(
               press: () {
-                Navigator.pushReplacementNamed(context, 'WelcomePage');
+                Navigator.pushReplacementNamed(context, 'Forgot Password');
                 //change this
               },
             ),

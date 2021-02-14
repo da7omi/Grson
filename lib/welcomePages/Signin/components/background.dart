@@ -1,13 +1,13 @@
-import 'package:GRSON/welcomepages/Welcome/welcome_screen.dart';
+// import 'package:GRSON/welcomepages/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
   final Widget child;
   final String page;
-   Background({
+  Background({
     Key key,
     @required this.child,
-    this.page='',
+    this.page = '',
   }) : super(key: key);
 
   @override
@@ -31,7 +31,7 @@ class Background extends StatelessWidget {
             child: IconButton(
               icon: Icon(Icons.arrow_back_ios, size: 55),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, page );
+                Navigator.pushReplacementNamed(context, page);
               },
             ),
             width: size.width * 0.25,
