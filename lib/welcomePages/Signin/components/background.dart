@@ -23,7 +23,7 @@ class Background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset("assets/images_welcomepages/signup_top.png",
-                width: size.width * 0.35, color: Colors.blue),
+                width: size.width * 0.35, color: Colors.blue[200]),
           ),
           Positioned(
             top: 0,

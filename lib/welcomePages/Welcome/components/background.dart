@@ -1,3 +1,4 @@
+import 'package:GRSON/secondPages/theme/Theme.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
@@ -20,13 +21,13 @@ class Background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset("assets/images_welcomepages/main_top.png",
-                width: size.width * 0.3, color: Colors.blue[300]),
+                width: size.width * 0.3, color: ArgonColors.primary),
           ),
           Positioned(
             bottom: 0,
             left: 0,
             child: Image.asset("assets/images_welcomepages/main_bottom.png",
-                width: size.width * 0.2, color: Colors.blue[100]),
+                width: size.width * 0.2, color: ArgonColors.primary),
           ),
           child,
         ],

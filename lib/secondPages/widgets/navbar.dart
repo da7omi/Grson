@@ -61,6 +61,7 @@ class _NavbarState extends State<Navbar> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     final bool categories =
         widget.categoryOne.isNotEmpty && widget.categoryTwo.isNotEmpty;
     final bool tagsExist =
@@ -237,21 +238,26 @@ class _NavbarState extends State<Navbar> {
                           onTap: () {
                             if (activeTag != widget.tags[index]) {
                               setState(() => activeTag = widget.tags[index]);
-                              _scrollController.scrollTo(
-                                  index:
-                                      index == widget.tags.length - 1 ? 1 : 0,
-                                  duration: Duration(milliseconds: 420),
-                                  curve: Curves.easeIn);
+                              // _scrollController.scrollTo(
+                              //     index:
+                              //         index == widget.tags.length - 1 ? 1 : 0,
+                              //     duration: Duration(milliseconds: 420),
+                              //     curve: Curves.easeIn);
                               if (widget.getCurrentPage != null)
                                 widget.getCurrentPage(activeTag);
                             }
                           },
                           child: Container(
                               margin: EdgeInsets.only(
-                                  left: index == 0 ? 46 : 8, right: 8),
+                                  bottom: 0,
+                                  left: index == 0 ? 0 : 0,
+                                  right: 0),
                               padding: EdgeInsets.only(
-                                  top: 4, bottom: 4, left: 20, right: 20),
-                              // width: 90,
+                                  top: 4,
+                                  bottom: 6,
+                                  left: index == 0 ? 27 : 40,
+                                  right: 40),
+                              width: index == 0 ? 200 : 200, /////////
                               decoration: BoxDecoration(
                                   color: activeTag == widget.tags[index]
                                       ? ArgonColors.primary

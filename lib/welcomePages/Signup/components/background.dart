@@ -1,4 +1,4 @@
-import 'package:GRSON/welcomepages/Welcome/welcome_screen.dart';
+// import 'package:GRSON/welcomepages/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
@@ -7,7 +7,7 @@ class Background extends StatelessWidget {
   Background({
     Key key,
     @required this.child,
-    this.page='',
+    this.page = '',
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class Background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset("assets/images_welcomepages/signup_top.png",
-                width: size.width * 0.35, color: Colors.blue),
+                width: size.width * 0.35, color: Colors.blue[200]),
           ),
           Positioned(
             top: 0,
@@ -42,7 +42,7 @@ class Background extends StatelessWidget {
             bottom: 0,
             right: 0,
             child: Image.asset("assets/images_welcomepages/login_bottom.png",
-                width: size.width * 0.4, color: Colors.blue[200]),
+                width: size.width * 0.4, color: Colors.blue[100]),
           ),
           child,
         ],

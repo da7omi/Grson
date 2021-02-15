@@ -37,7 +37,10 @@ class ArgonDrawer extends StatelessWidget {
                 alignment: Alignment.bottomLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 32),
-                  child: Image.asset("assets/img_secondpages/argon-logo.png"),
+                  child: Text(
+                    'GRSON',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                  ),
                 ),
               ),
             )),
@@ -92,22 +95,22 @@ class ArgonDrawer extends StatelessWidget {
               //     title: "Articles",
               //     isSelected: currentPage == "Articles" ? true : false),
               DrawerTile(
-                  icon: Icons.logout,
-                  onTap: () {
-                    // if (currentPage != "login_screen")
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return WelcomeScreen();
-                        },
-                      ),
-                    );
-                  },
-                  iconColor: ArgonColors.primary,
-                  title: "Sign Out",
-                  // isSelected: currentPage == "WelcomeScreen" ? true : false
-                  ),
+                icon: Icons.logout,
+                onTap: () {
+                  // if (currentPage != "login_screen")
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return WelcomeScreen();
+                      },
+                    ),
+                  );
+                },
+                iconColor: ArgonColors.primary,
+                title: "Sign Out",
+                // isSelected: currentPage == "WelcomeScreen" ? true : false
+              ),
             ],
           ),
         ),

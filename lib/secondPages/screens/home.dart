@@ -162,8 +162,9 @@ class Home extends StatelessWidget {
         appBar: Navbar(
           title: "Restaurant",
           searchBar: true,
-          categoryOne: "Queue",
-          categoryTwo: "Takeaway",
+          // categoryOne: "Queue Up",
+          // categoryTwo: "Take Away",
+          tags: ['Queue Up', 'Take Away'],
         ),
         backgroundColor: ArgonColors.bgColorScreen,
         // key: _scaffoldKey,
@@ -217,8 +218,7 @@ class Home extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
-
-child: CardHorizontal(
+                  child: CardHorizontal(
                       cta: "View restaurant",
                       title: homeCards["Ice Cream"]['title'],
                       img: homeCards["Ice Cream"]['image'],
@@ -226,7 +226,6 @@ child: CardHorizontal(
                         Navigator.pushNamed(context, '/homepage');
                       }),
                 )
-
               ],
             ),
           ),
