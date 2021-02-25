@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
-      page:'WelcomePage',//this is for back button
+      page: 'WelcomePage', //this is for back button
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,14 +45,14 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "SIGN UP",
               press: () {
-                Navigator.pushReplacementNamed(context, 'WelcomePage' );
+                Navigator.pushReplacementNamed(context, 'validation');
               },
             ),
             SizedBox(height: size.height * 0.02),
             AlreadyHaveAnAccountCheck(
               login: false,
               press: () {
-                Navigator.pushReplacementNamed(context, 'Sign In' );
+                Navigator.pushReplacementNamed(context, 'Sign In');
               },
             ),
             SizedBox(height: size.height * 0.01),

@@ -2,6 +2,7 @@
 
 import 'package:GRSON/welcomePages/Signin/components/forgot_password.dart';
 import 'package:GRSON/welcomePages/Signin/login_screen.dart';
+import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
 // import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
 import 'package:GRSON/welcomePages/Signup/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
           "Sign Up": (BuildContext context) => new SignUpScreen(),
           'Sign In': (BuildContext context) => new LoginScreen(),
           'Forgot Password': (BuildContext context) => new ForgotPassword(),
+          'validation': (BuildContext context) => new VerifyEmail(),
         });
   }
 }
