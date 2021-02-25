@@ -17,7 +17,7 @@ class ForgotPassword extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Please enter your email",
-                    style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 26),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
                   ),
                   SizedBox(height: size.height * 0.01),
                   RoundedInputEmailField(
@@ -25,9 +25,10 @@ class ForgotPassword extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                   RoundedButton(
-                    text: "Change Password",
+                    text: "Validation",
                     press: () {
-                      Navigator.pushReplacementNamed(context, 'Change Password');
+                      Navigator.pushReplacementNamed(
+                          context, 'Change Password');
                       //change this
                     },
                   ),
