@@ -3,13 +3,13 @@ import 'package:GRSON/welcomePages/components/rounded_input_validation_field.dar
 import 'package:flutter/material.dart';
 import 'package:GRSON/welcomePages/Signup/components/background.dart';
 
-class VerifyEmail extends StatelessWidget {
+class VerifyEmailForPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: Background(
-            page: 'Sign Up', //this is for the back button
+            page: 'Forgot Password', //this is for the back button
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -29,9 +29,9 @@ class VerifyEmail extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                   RoundedButton(
-                    text: "Submet",
+                    text: "Change Password",
                     press: () {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.pushReplacementNamed(context, '/homee');
                       //change this
                     },
                   ),

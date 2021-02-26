@@ -8,7 +8,7 @@ class DrawerTile extends StatelessWidget {
   final Function onTap;
   final bool isSelected;
   final Color iconColor;
-
+///////////////////////////// only one item in drawer
   DrawerTile(
       {this.title,
       this.icon,
@@ -28,7 +28,7 @@ class DrawerTile extends StatelessWidget {
           child: Row(
             children: [
               Icon(icon,
-                  size: 20, color: isSelected ? ArgonColors.white : iconColor),
+                  size: 30, color: isSelected ? ArgonColors.white : iconColor),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(title,

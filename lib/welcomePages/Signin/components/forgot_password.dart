@@ -25,11 +25,9 @@ class ForgotPassword extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                   RoundedButton(
-                    text: "Validation",
+                    text: "Send Code",
                     press: () {
-                      Navigator.pushReplacementNamed(
-                          context, 'Change Password');
-                      //change this
+                      Navigator.pushReplacementNamed(context, 'passValidation');
                     },
                   ),
                 ],

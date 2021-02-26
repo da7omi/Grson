@@ -1,6 +1,8 @@
 // import 'package:GRSON/anothor/main.dart';
 
+import 'package:GRSON/secondPages/screens/visitorhHome--.dart';
 import 'package:GRSON/welcomePages/Signin/components/forgot_password.dart';
+import 'package:GRSON/welcomePages/Signin/components/password_validation.dart';
 import 'package:GRSON/welcomePages/Signin/login_screen.dart';
 import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
 // import 'package:GRSON/welcomePages/Signup/components/email_validation.dart';
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
           // "/onboarding": (BuildContext context) => new Onboarding(),
           // "/onboarding": (BuildContext context) => new WelcomeScreen(),
           "/home": (BuildContext context) => new Home(),
+          "Visitor Home": (BuildContext context) => new VisitorHome(),
           "/profile": (BuildContext context) => new Profile(),
           "/articles": (BuildContext context) => new Articles(),
           "/elements": (BuildContext context) => new Elements(),
@@ -49,6 +52,8 @@ class MyApp extends StatelessWidget {
           'Sign In': (BuildContext context) => new LoginScreen(),
           'Forgot Password': (BuildContext context) => new ForgotPassword(),
           'validation': (BuildContext context) => new VerifyEmail(),
+          'passValidation': (BuildContext context) =>
+              new VerifyEmailForPassword(),
         });
   }
 }

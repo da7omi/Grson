@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "SIGN IN",
               press: () {
-                Navigator.pushReplacementNamed(context, 'Sign In' );
+                Navigator.pushReplacementNamed(context, 'Sign In');
               },
             ),
             RoundedButton(
@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
               // color: kPrimaryLightColor,
               // textColor: Colors.black,
               press: () {
-                Navigator.pushReplacementNamed(context, 'Sign Up' );
+                Navigator.pushReplacementNamed(context, 'Sign Up');
               },
             ),
             RoundedButton(
@@ -50,7 +50,7 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {
-                Navigator.pushReplacementNamed(context, '/home' );
+                Navigator.pushReplacementNamed(context, 'Visitor Home');
               },
             )
             // ]))
