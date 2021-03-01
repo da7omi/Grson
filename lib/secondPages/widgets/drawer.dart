@@ -9,8 +9,9 @@ import 'package:GRSON/secondpages/widgets/drawer-tile.dart';
 
 class ArgonDrawer extends StatelessWidget {
   final String currentPage;
-
-  ArgonDrawer({this.currentPage});
+  ArgonDrawer({
+    this.currentPage,
+  });
 
   _launchURL() async {
     const url = 'https://creative-tim.com';
@@ -52,8 +53,9 @@ class ArgonDrawer extends StatelessWidget {
               DrawerTile(
                   icon: Icons.home,
                   onTap: () {
-                    if (currentPage != "Home")
+                    if (currentPage != "Home") {
                       Navigator.pushReplacementNamed(context, '/home');
+                    }
                   },
                   iconColor: ArgonColors.primary,
                   title: "Home",

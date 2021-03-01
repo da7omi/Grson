@@ -194,7 +194,8 @@ class Profile extends StatelessWidget {
                                         ),
                                         SizedBox(height: 10.0),
                                         Align(
-                                          child: Text("Abdulrahman.alsarrani",
+                                          child: Text(
+                                              "Abdulrahman Almshaweeeeery",
                                               style: TextStyle(
                                                   color: Color.fromRGBO(
                                                       50, 50, 93, 1),
@@ -212,7 +213,7 @@ class Profile extends StatelessWidget {
                                         SizedBox(height: 10.0),
                                         Align(
                                           child: Text(
-                                              "Abdulrahman.alsarrani@gmail.com",
+                                              " عنننن رايح بالسيارة وعنننن راجع وسرا الليل وانت ما سريت",
                                               style: TextStyle(
                                                   color: Color.fromRGBO(
                                                       50, 50, 93, 1),

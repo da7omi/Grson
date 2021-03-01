@@ -55,7 +55,9 @@ class VisitorHome extends StatelessWidget {
           brightness: Brightness.dark,
         ),
         backgroundColor: ArgonColors.bgColorScreen,
-        drawer: ArgonDrawer(currentPage: "Home"),
+        drawer: ArgonDrawer(
+          currentPage: "Home",
+        ),
         body: Container(
           padding: EdgeInsets.only(left: 14.0, right: 14.0, top: 34),
           child: Column(children: <Widget>[
