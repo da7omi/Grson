@@ -170,7 +170,7 @@ class Home extends StatelessWidget {
         // key: _scaffoldKey,
         drawer: ArgonDrawer(currentPage: "Home"),
         body: Container(
-          padding: EdgeInsets.only(left: 24.0, right: 24.0),
+          padding: EdgeInsets.only(left: 14.0, right: 14.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
