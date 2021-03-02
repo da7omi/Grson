@@ -130,10 +130,10 @@ class _MyRestaurantHome extends State<RestaurantHome> {
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         )),
-                    Text('Restaurant',
-                        style: TextStyle(
-                          fontSize: 30,
-                        )),
+                    // Text('Restaurant',
+                    //     style: TextStyle(
+                    //       fontSize: 30,
+                    //     )),
                   ]),
                 ),
               ),
