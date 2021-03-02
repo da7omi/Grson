@@ -53,7 +53,7 @@ class _MyRestaurantHome extends State<RestaurantHome> {
   String state = "CLOSE";
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -70,7 +70,7 @@ class _MyRestaurantHome extends State<RestaurantHome> {
           padding: EdgeInsets.only(left: 14.0, right: 14.0, top: 34),
           child: Column(children: <Widget>[
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20),
+              margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.only(bottom: 14.0, top: 14.0),
               child: Text(
                 'My restaurant',
@@ -84,7 +84,7 @@ class _MyRestaurantHome extends State<RestaurantHome> {
                 color: kPrimaryColor,
                 borderRadius: BorderRadius.circular(29),
               ),
-              width: size.width * 0.8,
+              width: 300,
             ),
             CardSquare(
                 cta: "View restaurant",
@@ -93,7 +93,7 @@ class _MyRestaurantHome extends State<RestaurantHome> {
                 tap: () {
                   Navigator.pushNamed(context, '/homepage');
                 }),
-            SizedBox(height: size.height * 0.08),
+            SizedBox(height: 40),
             ClipRRect(
               borderRadius: BorderRadius.circular(29),
               child: RaisedButton(
@@ -108,8 +108,8 @@ class _MyRestaurantHome extends State<RestaurantHome> {
                 textColor: Colors.white,
                 padding: const EdgeInsets.all(0.0),
                 child: Container(
-                  width: size.width / 2,
-                  height: size.height / 6,
+                  width: 200,
+                  height: 105,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: open_close
