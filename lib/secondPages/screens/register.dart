@@ -28,17 +28,17 @@ class _RegisterState extends State<Register> {
         drawer: ArgonDrawer(currentPage: "Account"),
         body: Stack(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/img_secondpages/register-bg.png"),
-                      fit: BoxFit.cover)),
-            ),
+            // Container(
+            //   decoration: BoxDecoration(
+            //       image: DecorationImage(
+            //            image: AssetImage("assets/img_secondpages/register-bg.png"),
+            //           fit: BoxFit.cover)),
+            // ),
             SafeArea(
               child: ListView(children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                      top: 16, left: 24.0, right: 24.0, bottom: 32),
+                      top: 20, left: 24.0, right: 24.0, bottom: 32),
                   child: Card(
                       elevation: 5,
                       clipBehavior: Clip.antiAlias,
@@ -73,7 +73,7 @@ class _RegisterState extends State<Register> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
                                       children: [
-                                        Container(
+                                     /*   Container(
                                           // width: 0,
                                           height: 36,
                                           child: RaisedButton(
@@ -109,7 +109,7 @@ class _RegisterState extends State<Register> {
                                                               fontSize: 13))
                                                     ],
                                                   ))),
-                                        ),
+                                        ),*/
                                         Container(
                                           // width: 0,
                                           height: 36,
@@ -131,19 +131,22 @@ class _RegisterState extends State<Register> {
                                                         MainAxisAlignment
                                                             .spaceAround,
                                                     children: [
-                                                      Icon(
-                                                          FontAwesomeIcons
-                                                              .facebook,
-                                                          size: 13),
+                                                     
+                                                      // Icon(
+                                                      //     FontAwesomeIcons
+                                                      //         .facebook,
+                                                      //     size: 13),
                                                       SizedBox(
                                                         width: 5,
                                                       ),
-                                                      Text("FACEBOOK",
+                                                      Text("Add profile photo +",
+                                                      
                                                           style: TextStyle(
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
-                                                              fontSize: 13))
+                                                              fontSize: 13),),
+                                                              
                                                     ],
                                                   ))),
                                         ),
@@ -170,7 +173,7 @@ class _RegisterState extends State<Register> {
                                             top: 24.0, bottom: 24.0),
                                         child: Center(
                                           child: Text(
-                                              "Or sign up with the classic way",
+                                              "Resaturant inormation",
                                               style: TextStyle(
                                                   color: ArgonColors.text,
                                                   fontWeight: FontWeight.w200,
@@ -184,79 +187,74 @@ class _RegisterState extends State<Register> {
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
-                                              placeholder: "Name",
-                                              prefixIcon: Icon(Icons.school),
+                                              placeholder: "Resturant name",
+                                              prefixIcon: Icon(Icons.person),
                                             ),
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
-                                                placeholder: "Email",
-                                                prefixIcon: Icon(Icons.email)),
+                                                placeholder: "Restaurant location",
+                                                prefixIcon: Icon(Icons.location_pin)),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Input(
-                                                placeholder: "Password",
-                                                prefixIcon: Icon(Icons.lock)),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 24.0),
-                                            child: RichText(
-                                                text: TextSpan(
-                                                    text: "password strength: ",
-                                                    style: TextStyle(
-                                                        color:
-                                                            ArgonColors.muted),
-                                                    children: [
-                                                  TextSpan(
-                                                      text: "strong",
-                                                      style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color: ArgonColors
-                                                              .success))
-                                                ])),
-                                          ),
+                                         
+                                          // Padding(
+                                          //   padding: const EdgeInsets.only(
+                                          //       left: 24.0),
+                                          //   child: RichText(
+                                          //       text: TextSpan(
+                                          //           text: "password strength: ",
+                                          //           style: TextStyle(
+                                          //               color:
+                                          //                   ArgonColors.muted),
+                                          //           children: [
+                                          //         TextSpan(
+                                          //             text: "strong",
+                                          //             style: TextStyle(
+                                          //                 fontWeight:
+                                          //                     FontWeight.w600,
+                                          //                 color: ArgonColors
+                                          //                     .success))
+                                          //       ])),
+                                          // ),
                                         ],
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 8.0, top: 0, bottom: 16),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            Checkbox(
-                                                activeColor:
-                                                    ArgonColors.primary,
-                                                onChanged: (bool newValue) =>
-                                                    setState(() =>
-                                                        _checkboxValue =
-                                                            newValue),
-                                                value: _checkboxValue),
-                                            Text("I agree with the",
-                                                style: TextStyle(
-                                                    color: ArgonColors.muted,
-                                                    fontWeight:
-                                                        FontWeight.w200)),
-                                            GestureDetector(
-                                                onTap: () {
-                                                  Navigator.pushNamed(
-                                                      context, '/pro');
-                                                },
-                                                child: Container(
-                                                  margin:
-                                                      EdgeInsets.only(left: 5),
-                                                  child: Text("Privacy Policy",
-                                                      style: TextStyle(
-                                                          color: ArgonColors
-                                                              .primary)),
-                                                )),
-                                          ],
-                                        ),
-                                      ),
+                                      // Padding(
+                                      //   padding: const EdgeInsets.only(
+                                      //       left: 8.0, top: 0, bottom: 16),
+                                      //   child: Row(
+                                      //     mainAxisAlignment:
+                                      //         MainAxisAlignment.start,
+                                      //     children: [
+                                      //       Checkbox(
+                                      //           activeColor:
+                                      //               ArgonColors.primary,
+                                      //           onChanged: (bool newValue) =>
+                                      //               setState(() =>
+                                      //                   _checkboxValue =
+                                      //                       newValue),
+                                      //           value: _checkboxValue),
+                                      //       Text("I agree with the",
+                                      //           style: TextStyle(
+                                      //               color: ArgonColors.muted,
+                                      //               fontWeight:
+                                      //                   FontWeight.w200)),
+                                      //       GestureDetector(
+                                      //           onTap: () {
+                                      //             Navigator.pushNamed(
+                                      //                 context, '/pro');
+                                      //           },
+                                      //           child: Container(
+                                      //             margin:
+                                      //                 EdgeInsets.only(left: 5),
+                                      //             child: Text("Privacy Policy",
+                                      //                 style: TextStyle(
+                                      //                     color: ArgonColors
+                                      //                         .primary)),
+                                      //           )),
+                                      //     ],
+                                      //   ),
+                                      // ),
                                       Padding(
                                         padding: const EdgeInsets.only(top: 16),
                                         child: Center(
@@ -278,7 +276,7 @@ class _RegisterState extends State<Register> {
                                                     right: 16.0,
                                                     top: 12,
                                                     bottom: 12),
-                                                child: Text("REGISTER",
+                                                child: Text("SAVE",
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w600,
