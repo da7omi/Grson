@@ -194,7 +194,7 @@ class Profile extends StatelessWidget {
                                         ),
                                         SizedBox(height: 10.0),
                                         Align(
-                                          child: Text("Abdallah aldrama . ",
+                                          child: Text("Abdallah aldrama  ",
                                               style: TextStyle(
                                                   color: Color.fromRGBO(
                                                       50, 50, 93, 1),
