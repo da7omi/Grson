@@ -32,7 +32,6 @@ class VerifyEmail extends StatelessWidget {
                     text: "Submet",
                     press: () {
                       Navigator.pushReplacementNamed(context, '/home');
-                      //change this
                     },
                   ),
                 ],

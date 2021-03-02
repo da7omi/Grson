@@ -41,7 +41,7 @@ final Map<String, Map<String, String>> homeCards = {
   }
 };
 
-class VisitorHome extends StatelessWidget {
+class RestaurantHome extends StatelessWidget {
   // final GlobalKey _scaffoldKey = new GlobalKey();
   @override
   Widget build(BuildContext context) {

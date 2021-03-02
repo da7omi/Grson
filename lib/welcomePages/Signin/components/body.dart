@@ -1,9 +1,8 @@
 import 'package:GRSON/secondPages/theme/Theme.dart';
-import 'package:GRSON/welcomePages/Signup/components/body.dart';
+import 'package:GRSON/welcomePages/components/enum.dart';
 import 'package:GRSON/welcomePages/components/forget_password.dart';
 import 'package:flutter/material.dart';
 import 'package:GRSON/welcomepages/signin/components/background.dart';
-import 'package:GRSON/welcomepages/Signup/signup_screen.dart';
 import 'package:GRSON/welcomepages/components/already_have_account.dart';
 import 'package:GRSON/welcomepages/components/rounded_button.dart';
 import 'package:GRSON/welcomepages/components/rounded_input_email_field.dart';
@@ -82,7 +81,10 @@ class _MyBody extends State<Body> {
             RoundedButton(
               text: "SIGN IN",
               press: () {
-                Navigator.pushReplacementNamed(context, '/home');
+                if (temp == SingingCharacter.customer)
+                  Navigator.pushReplacementNamed(context, '/home');
+                else
+                  Navigator.pushReplacementNamed(context, "Restaurant Home");
                 //change this
               },
             ),
@@ -96,14 +98,7 @@ class _MyBody extends State<Body> {
             SizedBox(height: size.height * 0.01),
             AlreadyHaveAnAccountCheck(
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUpScreen();
-                    },
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, 'Sign Up');
               },
             ),
           ],

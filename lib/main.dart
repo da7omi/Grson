@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           // "/onboarding": (BuildContext context) => new Onboarding(),
           // "/onboarding": (BuildContext context) => new WelcomeScreen(),
           "/home": (BuildContext context) => new Home(),
-          "Visitor Home": (BuildContext context) => new VisitorHome(),
+          "Restaurant Home": (BuildContext context) => new RestaurantHome(),
           "/profile": (BuildContext context) => new Profile(),
           "/articles": (BuildContext context) => new Articles(),
           "/elements": (BuildContext context) => new Elements(),
