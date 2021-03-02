@@ -41,8 +41,16 @@ final Map<String, Map<String, String>> homeCards = {
   }
 };
 
-class RestaurantHome extends StatelessWidget {
+class RestaurantHome extends StatefulWidget {
+  RestaurantHome({Key key}) : super(key: key);
+  @override
+  State<StatefulWidget> createState() => _MyRestaurantHome();
+}
+
+class _MyRestaurantHome extends State<RestaurantHome> {
   // final GlobalKey _scaffoldKey = new GlobalKey();
+  bool open_close = false;
+  String state = "CLOSE";
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -62,7 +70,7 @@ class RestaurantHome extends StatelessWidget {
           padding: EdgeInsets.only(left: 14.0, right: 14.0, top: 34),
           child: Column(children: <Widget>[
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: EdgeInsets.symmetric(vertical: 20),
               padding: EdgeInsets.only(bottom: 14.0, top: 14.0),
               child: Text(
                 'My restaurant',
@@ -85,6 +93,51 @@ class RestaurantHome extends StatelessWidget {
                 tap: () {
                   Navigator.pushNamed(context, '/homepage');
                 }),
+            SizedBox(height: size.height * 0.08),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(29),
+              child: RaisedButton(
+                onPressed: () {
+                  setState(() => open_close = !open_close);
+                  if (open_close) {
+                    setState(() => state = 'OPEN');
+                  } else {
+                    setState(() => state = 'CLOSE');
+                  }
+                },
+                textColor: Colors.white,
+                padding: const EdgeInsets.all(0.0),
+                child: Container(
+                  width: size.width / 2,
+                  height: size.height / 6,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: open_close
+                          ? <Color>[
+                              kPrimaryColor,
+                              kSuccess, //second color
+                            ]
+                          : <Color>[
+                              kPrimaryColor,
+                              kError, //second color
+                            ],
+                    ),
+                  ),
+                  padding: EdgeInsets.all(30),
+                  child: Column(children: [
+                    Text(state,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        )),
+                    Text('Restaurant',
+                        style: TextStyle(
+                          fontSize: 30,
+                        )),
+                  ]),
+                ),
+              ),
+            )
           ]),
         ));
   }
