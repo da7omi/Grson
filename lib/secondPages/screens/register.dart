@@ -23,7 +23,13 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Navbar(transparent: true, title: ""),
+        appBar: AppBar(
+          title: Text(
+            "Restaurant's Information",
+          ),
+          elevation: 30,
+          brightness: Brightness.dark,
+        ),
         extendBodyBehindAppBar: true,
         drawer: ArgonDrawer(currentPage: "Account"),
         body: Stack(
@@ -73,7 +79,7 @@ class _RegisterState extends State<Register> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
                                       children: [
-                                     /*   Container(
+                                        /*   Container(
                                           // width: 0,
                                           height: 36,
                                           child: RaisedButton(
@@ -131,7 +137,6 @@ class _RegisterState extends State<Register> {
                                                         MainAxisAlignment
                                                             .spaceAround,
                                                     children: [
-                                                     
                                                       // Icon(
                                                       //     FontAwesomeIcons
                                                       //         .facebook,
@@ -139,14 +144,13 @@ class _RegisterState extends State<Register> {
                                                       SizedBox(
                                                         width: 5,
                                                       ),
-                                                      Text("Add profile photo +",
-                                                      
-                                                          style: TextStyle(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontSize: 13),),
-                                                              
+                                                      Text(
+                                                        "Add profile photo +",
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            fontSize: 13),
+                                                      ),
                                                     ],
                                                   ))),
                                         ),
@@ -172,8 +176,7 @@ class _RegisterState extends State<Register> {
                                         padding: const EdgeInsets.only(
                                             top: 24.0, bottom: 24.0),
                                         child: Center(
-                                          child: Text(
-                                              "Resaturant inormation",
+                                          child: Text("Resaturant inormation",
                                               style: TextStyle(
                                                   color: ArgonColors.text,
                                                   fontWeight: FontWeight.w200,
@@ -194,10 +197,12 @@ class _RegisterState extends State<Register> {
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Input(
-                                                placeholder: "Restaurant location",
-                                                prefixIcon: Icon(Icons.location_pin)),
+                                                placeholder:
+                                                    "Restaurant location",
+                                                prefixIcon:
+                                                    Icon(Icons.location_pin)),
                                           ),
-                                         
+
                                           // Padding(
                                           //   padding: const EdgeInsets.only(
                                           //       left: 24.0),
