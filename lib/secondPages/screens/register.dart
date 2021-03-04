@@ -37,7 +37,8 @@ class _RegisterState extends State<Register> {
             // Container(
             //   decoration: BoxDecoration(
             //       image: DecorationImage(
-            //            image: AssetImage("assets/img_secondpages/register-bg.png"),
+            //           image:
+            //               AssetImage("assets/img_secondpages/register-bg.png"),
             //           fit: BoxFit.cover)),
             // ),
             SafeArea(
@@ -49,7 +50,7 @@ class _RegisterState extends State<Register> {
                       elevation: 5,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.0),
+                        borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: Column(
                         children: [
