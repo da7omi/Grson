@@ -3,6 +3,7 @@ import 'package:GRSON/secondPages/widgets/drawer.dart';
 import 'package:GRSON/secondPages/widgets/input.dart';
 import 'package:GRSON/welcomePages/components/rounded_input_location_field.dart';
 import 'package:GRSON/welcomePages/components/rounded_input_person_field.dart';
+import 'package:GRSON/welcomePages/constants.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantPage extends StatelessWidget {
@@ -238,7 +239,139 @@ fontSize: 13))
                 ),
               ]),
             ),
-            Icon(Icons.directions_transit), // QUEUES ya zbaaaal
+            // Icon(Icons.directions_transit), // QUEUES ya zbaaaal
+            SingleChildScrollView(
+                child: Padding(
+              padding: EdgeInsets.only(right: 24, left: 24, bottom: 36),
+              child: SafeArea(
+                bottom: true,
+                child: Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, top: 32),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      // child: Text("Buttons",
+                      //     style: TextStyle(
+                      //         color: ArgonColors.text,
+                      //         fontWeight: FontWeight.w600,
+                      //         fontSize: 16)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, top: 32),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                    ),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 34.0, right: 34.0, top: 16),
+                      child: FlatButton(
+                        textColor: ArgonColors.white,
+                        color: ArgonColors.primary,
+                        onPressed: () {
+                          // Respond to button press
+                          Navigator.pushReplacementNamed(context, '/home');
+                        },
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          // Replace with a Row for horizontal icon + text
+                          children: <Widget>[
+                            Icon(Icons.add),
+                            Text("Add queue")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, top: 32),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                    ),
+                  ),
+                  SizedBox(
+                    // width: double.infinity,
+
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 160.0, right: 0.0, top: 0),
+                      child: FlatButton(
+                        textColor: ArgonColors.white,
+                        color: Colors.yellow,
+                        onPressed: () {
+                          // Respond to button press
+                          Navigator.pushReplacementNamed(context, '/home');
+                        },
+                        padding: EdgeInsets.all(10.0),
+                        child: Column(
+                          // Replace with a Row for horizontal icon + text
+                          children: <Widget>[
+                            Icon(Icons.stop),
+                            Text("stop all queues")
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0, top: 32),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                    ),
+                  ),
+                  Container(
+                      color: kPrimaryLightColor,
+                      padding:
+                          const EdgeInsets.only(left: 8.0, top: 8, bottom: 8),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(context, '/home');
+                          },
+                          // needed
+                          child: Row(
+                            children: [
+                              Text("in-door 2 "),
+                              FlatButton(
+                                onPressed: () {
+                                  // Respond to button press
+                                  Navigator.pushReplacementNamed(
+                                      context, '/home');
+                                },
+                                padding: const EdgeInsets.only(
+                                    left: 4.0, top: 8, bottom: 8),
+                                child: Text("Accepet next"),
+                                color: Colors.green,
+                              ),
+                              FlatButton(
+                                onPressed: () {
+                                  // Respond to button press
+                                  Navigator.pushReplacementNamed(
+                                      context, '/home');
+                                },
+                                padding: const EdgeInsets.only(
+                                    left: 4.0, top: 8, bottom: 8),
+                                child: Text("stop"),
+                                color: Colors.yellow,
+                              ),
+                              FlatButton(
+                                onPressed: () {
+                                  // Respond to button press
+                                  Navigator.pushReplacementNamed(
+                                      context, '/home');
+                                },
+                                padding: const EdgeInsets.only(
+                                    left: 4.0, top: 8, bottom: 8),
+                                child: Text("Delete"),
+                                color: ArgonColors.error,
+                              )
+                            ],
+                          )))
+                ]),
+              ),
+            )),
             Icon(Icons.directions_bike),
           ],
         ),
