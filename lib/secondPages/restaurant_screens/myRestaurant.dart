@@ -1,6 +1,8 @@
 import 'package:GRSON/secondPages/theme/Theme.dart';
 import 'package:GRSON/secondPages/widgets/drawer.dart';
 import 'package:GRSON/secondPages/widgets/input.dart';
+import 'package:GRSON/welcomePages/components/rounded_input_location_field.dart';
+import 'package:GRSON/welcomePages/components/rounded_input_person_field.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantPage extends StatelessWidget {
@@ -58,7 +60,7 @@ class RestaurantPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       top: 30, left: 24.0, right: 24.0, bottom: 32),
                   child: Card(
-                      elevation: 5,
+                      elevation: 9,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25.0),
@@ -71,8 +73,9 @@ class RestaurantPage extends StatelessWidget {
                                   color: ArgonColors.white,
                                   border: Border(
                                       bottom: BorderSide(
-                                          width: 0.5,
-                                          color: ArgonColors.muted))),
+                                    width: 0.5,
+                                    color: ArgonColors.muted,
+                                  ))),
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -161,7 +164,7 @@ fontSize: 13))
                                                         style: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.w600,
-                                                            fontSize: 13),
+                                                            fontSize: 14),
                                                       ),
                                                     ],
                                                   ))),
@@ -173,10 +176,10 @@ fontSize: 13))
                                 ],
                               )),
                           Container(
-                              height: MediaQuery.of(context).size.height * 0.50,
+                              height: MediaQuery.of(context).size.height * 0.35,
                               color: Color.fromRGBO(244, 245, 247, 1),
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(15),
                                 child: Center(
                                   child: Column(
                                     crossAxisAlignment:
@@ -184,108 +187,33 @@ fontSize: 13))
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 0, bottom: 0),
-                                        child: Center(
-                                          child: Text("Resaturant inormation",
-                                              style: TextStyle(
-                                                  color: ArgonColors.text,
-                                                  fontWeight: FontWeight.w200,
-                                                  fontSize: 16)),
-                                        ),
-                                      ),
                                       Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Input(
-                                              placeholder: "Resturant name",
-                                              prefixIcon: Icon(Icons.person),
-                                            ),
+                                        children: <Widget>[
+                                          RoundedInputPersonField(
+                                            hintText: "Restaurant name",
+                                            onChanged: (value) {},
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Input(
-                                                placeholder:
-                                                    "Restaurant location",
-                                                prefixIcon:
-                                                    Icon(Icons.location_pin)),
+                                          RoundedInputLocationField(
+                                            hintText: "Restaurant location URL",
+                                            onChanged: (value) {},
                                           ),
-
-// Padding(
-//   padding: const EdgeInsets.only(
-//       left: 24.0),
-//   child: RichText(
-//       text: TextSpan(
-//           text: "password strength: ",
-//           style: TextStyle(
-//               color:
-//                   ArgonColors.muted),
-//           children: [
-//         TextSpan(
-//             text: "strong",
-//             style: TextStyle(
-//                 fontWeight:
-//                     FontWeight.w600,
-//                 color: ArgonColors
-//                     .success))
-//       ])),
-// ),
                                         ],
                                       ),
-// Padding(
-//   padding: const EdgeInsets.only(
-//       left: 8.0, top: 0, bottom: 16),
-//   child: Row(
-//     mainAxisAlignment:
-//         MainAxisAlignment.start,
-//     children: [
-//       Checkbox(
-//           activeColor:
-//               ArgonColors.primary,
-//           onChanged: (bool newValue) =>
-//               setState(() =>
-//                   _checkboxValue =
-//                       newValue),
-//           value: _checkboxValue),
-//       Text("I agree with the",
-//           style: TextStyle(
-//               color: ArgonColors.muted,
-//               fontWeight:
-//                   FontWeight.w200)),
-//       GestureDetector(
-//           onTap: () {
-//             Navigator.pushNamed(
-//                 context, '/pro');
-//           },
-//           child: Container(
-//             margin:
-//                 EdgeInsets.only(left: 5),
-//             child: Text("Privacy Policy",
-//                 style: TextStyle(
-//                     color: ArgonColors
-//                         .primary)),
-//           )),
-//     ],
-//   ),
-// ),
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 16),
+                                        padding: const EdgeInsets.only(top: 0),
                                         child: Center(
                                           child: FlatButton(
                                             textColor: ArgonColors.white,
                                             color: ArgonColors.primary,
                                             onPressed: () {
-// Respond to button press
                                               Navigator.pushNamed(
                                                   context, '/home');
                                             },
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(4.0),
+                                                  BorderRadius.circular(29.0),
                                             ),
                                             child: Padding(
                                                 padding: EdgeInsets.only(
@@ -297,7 +225,7 @@ fontSize: 13))
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        fontSize: 26.0))),
+                                                        fontSize: 20.0))),
                                           ),
                                         ),
                                       )
@@ -310,7 +238,7 @@ fontSize: 13))
                 ),
               ]),
             ),
-            Icon(Icons.directions_transit), ////////// QUEUES ya zbaaaal
+            Icon(Icons.directions_transit), // QUEUES ya zbaaaal
             Icon(Icons.directions_bike),
           ],
         ),
