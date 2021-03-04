@@ -91,7 +91,7 @@ class _MyRestaurantHome extends State<RestaurantHome> {
                 title: homeCards["Ice Cream"]['title'],
                 img: homeCards["Ice Cream"]['image'],
                 tap: () {
-                  Navigator.pushNamed(context, '/homepage');
+                  Navigator.pushNamed(context, "Restaurant page");
                 }),
             SizedBox(height: 40),
             ClipRRect(
