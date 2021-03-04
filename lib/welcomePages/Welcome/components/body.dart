@@ -23,8 +23,8 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
             SizedBox(height: size.height * 0.08),
-            Image.asset("assets/icons_welcomepages/GRSON.png",
-                fit: BoxFit.fill, height: 200, width: 200),
+            Image.asset("assets/icons_welcomepages/login.png",
+                fit: BoxFit.fill, height: 225, width: 275),
             // height: size.height * 0.45,
 
             SizedBox(height: size.height * 0.05),
