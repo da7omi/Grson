@@ -1,6 +1,7 @@
 // import 'package:GRSON/anothor/main.dart';
 
 import 'package:GRSON/secondPages/restaurant_screens/myRestaurant.dart';
+import 'package:GRSON/secondPages/restaurant_screens/queueAdd.dart';
 import 'package:GRSON/secondPages/restaurant_screens/restaurantHome.dart';
 // import 'package:GRSON/secondPages/screens/visitorhHome--.dart';
 import 'package:GRSON/welcomePages/Signin/components/forgot_password.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           "/home": (BuildContext context) => new Home(),
           "Restaurant Home": (BuildContext context) => new RestaurantHome(),
           "Restaurant page": (BuildContext context) => new RestaurantPage(),
+          "Queue add": (BuildContext context) => new QueueAdd(),
           "/profile": (BuildContext context) => new Profile(),
           "/articles": (BuildContext context) => new Articles(),
           "/elements": (BuildContext context) => new Elements(),

@@ -68,8 +68,13 @@ class RestaurantPage extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                              height: MediaQuery.of(context).size.height * 0.15,
+                              height: MediaQuery.of(context).size.height * 0.27,
+                              width: MediaQuery.of(context).size.width * 0.9,
                               decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://images.unsplash.com/photo-1516559828984-fb3b99548b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"),
+                                  ),
                                   color: ArgonColors.white,
                                   border: Border(
                                       bottom: BorderSide(
@@ -172,7 +177,6 @@ fontSize: 13))
                                       ],
                                     ),
                                   ),
-// Divider()
                                 ],
                               )),
                           Container(

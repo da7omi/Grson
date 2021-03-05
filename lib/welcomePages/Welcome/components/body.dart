@@ -50,14 +50,12 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {
-                Navigator.pushReplacementNamed(context, '/home');
+                Navigator.pushReplacementNamed(context, 'Queue add');
               },
             )
-            // ]))
           ],
         ),
       ),
-      // )
     );
   }
 }
