@@ -1,3 +1,4 @@
+import 'package:GRSON/welcomePages/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:GRSON/secondpages/theme/Theme.dart';
@@ -43,11 +44,18 @@ class _ElementsState extends State<Elements> {
                 padding: const EdgeInsets.only(left: 8.0, top: 32),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Buttons",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
+                  // child: Text("Buttons",
+                  //     style: TextStyle(
+                  //         color: ArgonColors.text,
+                  //         fontWeight: FontWeight.w600,
+                  //         fontSize: 16)),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0, top: 32),
+                child: Align(
+                  alignment: Alignment.centerLeft,
                 ),
               ),
               SizedBox(
@@ -55,166 +63,18 @@ class _ElementsState extends State<Elements> {
                 child: Padding(
                   padding:
                       const EdgeInsets.only(left: 34.0, right: 34.0, top: 16),
-                  child: RaisedButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.initial,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("DEFAULT",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: ArgonColors.text,
-                    color: ArgonColors.secondary,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("SECONDARY",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
+                  child: FlatButton(
                     textColor: ArgonColors.white,
                     color: ArgonColors.primary,
                     onPressed: () {
                       // Respond to button press
                       Navigator.pushReplacementNamed(context, '/home');
                     },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      // Replace with a Row for horizontal icon + text
+                      children: <Widget>[Icon(Icons.add), Text("Add queue")],
                     ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("PRIMARY",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.info,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("INFO",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.success,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("SUCCESS",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.warning,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("WARNING",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-                  child: RaisedButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.error,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 12, bottom: 12),
-                        child: Text("ERROR",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 16.0))),
                   ),
                 ),
               ),
@@ -222,199 +82,304 @@ class _ElementsState extends State<Elements> {
                 padding: const EdgeInsets.only(left: 8.0, top: 32),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Typography",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Heading 1",
-                      style: TextStyle(fontSize: 44, color: ArgonColors.text)),
+              SizedBox(
+                // width: double.infinity,
+
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 160.0, right: 0.0, top: 0),
+                  child: FlatButton(
+                    textColor: ArgonColors.white,
+                    color: Colors.yellow,
+                    onPressed: () {
+                      // Respond to button press
+                      Navigator.pushReplacementNamed(context, '/home');
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      // Replace with a Row for horizontal icon + text
+                      children: <Widget>[
+                        Icon(Icons.stop),
+                        Text("stop all queues")
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Heading 2",
-                    style: TextStyle(fontSize: 38, color: ArgonColors.text)),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Heading 3",
-                    style: TextStyle(fontSize: 30, color: ArgonColors.text)),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Heading 4",
-                    style: TextStyle(fontSize: 24, color: ArgonColors.text)),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Heading 5",
-                    style: TextStyle(fontSize: 21, color: ArgonColors.text)),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Paragraph",
-                    style: TextStyle(fontSize: 16, color: ArgonColors.text)),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("This is a muted paragraph.",
-                    style: TextStyle(fontSize: 16, color: ArgonColors.muted)),
-              ),
+
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, top: 32),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Inputs",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 32.0),
-                child: Input(
-                  placeholder: "Regular",
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Input(
-                  placeholder: "Custom border",
-                  borderColor: ArgonColors.info,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Input(
-                  placeholder: "Icon left",
-                  prefixIcon: Icon(Icons.ac_unit),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Input(
-                  placeholder: "Icon right",
-                  suffixIcon: Icon(Icons.ac_unit),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Input(
-                  placeholder: "Custom success",
-                  borderColor: ArgonColors.success,
-                  suffixIcon:
-                      Icon(Icons.check_circle, color: ArgonColors.success),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Input(
-                  placeholder: "Custom error",
-                  borderColor: ArgonColors.error,
-                  suffixIcon: Icon(Icons.error, color: ArgonColors.error),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Switches",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Switch is ON",
-                      style: TextStyle(color: ArgonColors.text)),
-                  Switch.adaptive(
-                    value: switchValueOne,
-                    onChanged: (bool newValue) =>
-                        setState(() => switchValueOne = newValue),
-                    activeColor: ArgonColors.primary,
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Switch is OFF",
-                      style: TextStyle(color: ArgonColors.text)),
-                  Switch.adaptive(
-                    value: switchValueTwo,
-                    onChanged: (bool newValue) =>
-                        setState(() => switchValueTwo = newValue),
-                    activeColor: ArgonColors.primary,
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Navigation",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
-                ),
-              ),
-              Navbar(
-                title: "Regular",
-                backButton: true,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Navbar(
-                    title: "Custom background",
-                    backButton: true,
-                    bgColor: ArgonColors.primary),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Navbar(
-                  title: "Categories",
-                  searchBar: true,
-                  categoryOne: "Incredible",
-                  categoryTwo: "Customization",
-                  backButton: true,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: Navbar(
-                  title: "Search",
-                  searchBar: true,
-                  backButton: true,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text("Table Cell",
-                      style: TextStyle(
-                          color: ArgonColors.text,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16)),
-                ),
-              ),
-              TableCellSettings(
-                  title: "Manage Options in Settings",
-                  onTap: () {
-                    Navigator.pushNamed(context, '/pro');
-                  }),
+              Container(
+                  color: kPrimaryLightColor,
+                  padding: const EdgeInsets.only(left: 8.0, top: 8, bottom: 8),
+                  child: InkWell(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, '/home');
+                      },
+                      // needed
+                      child: Row(
+                        children: [
+                          Text("in-door 2 "),
+                          FlatButton(
+                            onPressed: () {
+                              // Respond to button press
+                              Navigator.pushReplacementNamed(context, '/home');
+                            },
+                            padding: const EdgeInsets.only(
+                                left: 4.0, top: 8, bottom: 8),
+                            child: Text("Accepet next"),
+                            color: Colors.green,
+                          ),
+                          FlatButton(
+                            onPressed: () {
+                              // Respond to button press
+                              Navigator.pushReplacementNamed(context, '/home');
+                            },
+                            padding: const EdgeInsets.only(
+                                left: 4.0, top: 8, bottom: 8),
+                            child: Text("stop"),
+                            color: Colors.yellow,
+                          ),
+                          FlatButton(
+                            onPressed: () {
+                              // Respond to button press
+                              Navigator.pushReplacementNamed(context, '/home');
+                            },
+                            padding: const EdgeInsets.only(
+                                left: 4.0, top: 8, bottom: 8),
+                            child: Text("Delete"),
+                            color: ArgonColors.error,
+                          )
+                        ],
+                      )))
+
+              // SizedBox(
+              //   width: double.infinity,
+              //   child: Padding(
+              //     padding:
+              //         const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
+              //     child: RaisedButton(
+              //       textColor: ArgonColors.white,
+              //       color: ArgonColors.error,
+              //       onPressed: () {
+              //         // Respond to button press
+              //         Navigator.pushReplacementNamed(context, '/home');
+              //       },
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(4.0),
+              //       ),
+              //       child: Padding(
+              //           padding: EdgeInsets.only(
+              //               left: 16.0, right: 16.0, top: 12, bottom: 12),
+              //           child: Text("ERROR",
+              //               style: TextStyle(
+              //                   fontWeight: FontWeight.w600, fontSize: 16.0))),
+              //     ),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8.0, top: 32),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Typography",
+              //         style: TextStyle(
+              //             color: ArgonColors.text,
+              //             fontWeight: FontWeight.w600,
+              //             fontSize: 16)),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Heading 1",
+              //         style: TextStyle(fontSize: 44, color: ArgonColors.text)),
+              //   ),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("Heading 2",
+              //       style: TextStyle(fontSize: 38, color: ArgonColors.text)),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("Heading 3",
+              //       style: TextStyle(fontSize: 30, color: ArgonColors.text)),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("Heading 4",
+              //       style: TextStyle(fontSize: 24, color: ArgonColors.text)),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("Heading 5",
+              //       style: TextStyle(fontSize: 21, color: ArgonColors.text)),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("Paragraph",
+              //       style: TextStyle(fontSize: 16, color: ArgonColors.text)),
+              // ),
+              // Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("This is a muted paragraph.",
+              //       style: TextStyle(fontSize: 16, color: ArgonColors.muted)),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8.0, top: 32),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Inputs",
+              //         style: TextStyle(
+              //             color: ArgonColors.text,
+              //             fontWeight: FontWeight.w600,
+              //             fontSize: 16)),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 32.0),
+              //   child: Input(
+              //     placeholder: "Regular",
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Input(
+              //     placeholder: "Custom border",
+              //     borderColor: ArgonColors.info,
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Input(
+              //     placeholder: "Icon left",
+              //     prefixIcon: Icon(Icons.ac_unit),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Input(
+              //     placeholder: "Icon right",
+              //     suffixIcon: Icon(Icons.ac_unit),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Input(
+              //     placeholder: "Custom success",
+              //     borderColor: ArgonColors.success,
+              //     suffixIcon:
+              //         Icon(Icons.check_circle, color: ArgonColors.success),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Input(
+              //     placeholder: "Custom error",
+              //     borderColor: ArgonColors.error,
+              //     suffixIcon: Icon(Icons.error, color: ArgonColors.error),
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Switches",
+              //         style: TextStyle(
+              //             color: ArgonColors.text,
+              //             fontWeight: FontWeight.w600,
+              //             fontSize: 16)),
+              //   ),
+              // ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Text("Switch is ON",
+              //         style: TextStyle(color: ArgonColors.text)),
+              //     Switch.adaptive(
+              //       value: switchValueOne,
+              //       onChanged: (bool newValue) =>
+              //           setState(() => switchValueOne = newValue),
+              //       activeColor: ArgonColors.primary,
+              //     ),
+              //   ],
+              // ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Text("Switch is OFF",
+              //         style: TextStyle(color: ArgonColors.text)),
+              //     Switch.adaptive(
+              //       value: switchValueTwo,
+              //       onChanged: (bool newValue) =>
+              //           setState(() => switchValueTwo = newValue),
+              //       activeColor: ArgonColors.primary,
+              //     ),
+              //   ],
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Navigation",
+              //         style: TextStyle(
+              //             color: ArgonColors.text,
+              //             fontWeight: FontWeight.w600,
+              //             fontSize: 16)),
+              //   ),
+              // ),
+              // Navbar(
+              //   title: "Regular",
+              //   backButton: true,
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Navbar(
+              //       title: "Custom background",
+              //       backButton: true,
+              //       bgColor: ArgonColors.primary),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Navbar(
+              //     title: "Categories",
+              //     searchBar: true,
+              //     categoryOne: "Incredible",
+              //     categoryTwo: "Customization",
+              //     backButton: true,
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 16.0),
+              //   child: Navbar(
+              //     title: "Search",
+              //     searchBar: true,
+              //     backButton: true,
+              //   ),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Text("Table Cell",
+              //         style: TextStyle(
+              //             color: ArgonColors.text,
+              //             fontWeight: FontWeight.w600,
+              //             fontSize: 16)),
+              //   ),
+              // ),
+              // TableCellSettings(
+              //     title: "Manage Options in Settings",
+              //     onTap: () {
+              //       Navigator.pushNamed(context, '/pro');
+              //     }),
             ]),
           ),
         )));
