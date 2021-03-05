@@ -1,4 +1,5 @@
 import 'package:GRSON/secondPages/theme/Theme.dart';
+import 'package:GRSON/secondPages/widgets/drawer.dart';
 import 'package:GRSON/welcomePages/components/enum.dart';
 import 'package:GRSON/welcomePages/components/forget_password.dart';
 import 'package:GRSON/welcomePages/components/rounded_number_field.dart';
@@ -28,16 +29,24 @@ class _MyBody extends State<QueueAdd> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: Background(
-      page: 'WelcomePage',
-      child: SingleChildScrollView(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios, size: 25),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, "Restaurant page");
+          },
+        ),
+        title: Text(
+          "Add Queue",
+        ),
+        elevation: 30,
+        brightness: Brightness.dark,
+      ),
+      backgroundColor: ArgonColors.bgColorScreen,
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Queue",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
-            ),
             SizedBox(height: size.height * 0.05),
             // SizedBox(height: size.height * 0.02),
             RoundedQueueField(
@@ -68,6 +77,6 @@ class _MyBody extends State<QueueAdd> {
           ],
         ),
       ),
-    ));
+    );
   }
 }

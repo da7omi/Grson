@@ -326,7 +326,10 @@ fontSize: 13))
                                           child: RaisedButton(
                                               textColor: ArgonColors.primary,
                                               color: ArgonColors.secondary,
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.pushReplacementNamed(
+                                                    context, 'Queue add');
+                                              },
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(4)),
