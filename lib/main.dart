@@ -1,7 +1,7 @@
 // import 'package:GRSON/anothor/main.dart';
 
+import 'package:GRSON/secondPages/restaurant_screens/My_Restaurant/myRestaurant.dart';
 import 'package:GRSON/secondPages/restaurant_screens/Queue/queueAdd.dart';
-import 'package:GRSON/secondPages/restaurant_screens/myRestaurant.dart';
 
 import 'package:GRSON/secondPages/restaurant_screens/restaurantHome.dart';
 // import 'package:GRSON/secondPages/screens/visitorhHome--.dart';
