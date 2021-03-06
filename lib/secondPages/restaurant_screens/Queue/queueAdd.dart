@@ -99,7 +99,7 @@ class _MyBody extends State<QueueAdd> {
                                         color: ArgonColors.primary,
                                         onPressed: () {
                                           Navigator.pushNamed(
-                                              context, 'Restaurant Home');
+                                              context, 'Restaurant page');
                                         },
                                         shape: RoundedRectangleBorder(
                                           borderRadius:

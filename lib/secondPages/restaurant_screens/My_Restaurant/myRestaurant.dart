@@ -15,6 +15,12 @@ class RestaurantPage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios, size: 25),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "Restaurant Home");
+            },
+          ),
           title: Text(
             "Restaurant's page",
           ),
