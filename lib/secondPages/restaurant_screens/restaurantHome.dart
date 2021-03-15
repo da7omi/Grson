@@ -1,16 +1,7 @@
-import 'package:GRSON/secondPages/widgets/card-shopping.dart';
 import 'package:GRSON/secondPages/widgets/card-square.dart';
-// import 'package:GRSON/secondPages/widgets/card-square.dart';
 import 'package:GRSON/welcomePages/constants.dart';
 import 'package:flutter/material.dart';
-
 import 'package:GRSON/secondpages/theme/Theme.dart';
-
-//widgets
-import 'package:GRSON/secondpages/widgets/navbar.dart';
-import 'package:GRSON/secondpages/widgets/card-horizontal.dart';
-import 'package:GRSON/secondpages/widgets/card-small.dart';
-// import 'package:GRSON/secondpages/widgets/card-square.dart';
 import 'package:GRSON/secondpages/widgets/drawer.dart';
 
 final Map<String, Map<String, String>> homeCards = {
@@ -48,12 +39,10 @@ class RestaurantHome extends StatefulWidget {
 }
 
 class _MyRestaurantHome extends State<RestaurantHome> {
-  // final GlobalKey _scaffoldKey = new GlobalKey();
   bool open_close = false;
   String state = "CLOSE";
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           title: Text(
