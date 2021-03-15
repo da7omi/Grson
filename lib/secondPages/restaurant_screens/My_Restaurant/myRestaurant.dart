@@ -1,5 +1,6 @@
 import 'package:GRSON/secondPages/restaurant_screens/Information/homepage.dart';
 import 'package:GRSON/secondPages/restaurant_screens/Queue/homePage.dart';
+import 'package:GRSON/secondPages/restaurant_screens/Take_Away/takeaway.dart';
 import 'package:GRSON/secondPages/theme/Theme.dart';
 import 'package:GRSON/secondPages/widgets/drawer.dart';
 import 'package:GRSON/secondPages/widgets/input.dart';
@@ -65,7 +66,7 @@ class RestaurantPage extends StatelessWidget {
           children: [
             HomeInformationPage(),
             HomeQueuePage(),
-            Icon(Icons.directions_bike),
+            HomeTake_AwayPage(),
           ],
         ),
       ),

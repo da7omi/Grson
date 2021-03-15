@@ -2,10 +2,25 @@ import 'package:GRSON/secondPages/theme/Theme.dart';
 import 'package:GRSON/welcomePages/constants.dart';
 import 'package:flutter/material.dart';
 
-class HomeQueuePage extends StatelessWidget {
+class HomeTake_AwayPage extends StatefulWidget {
   @override
+  State<StatefulWidget> createState() => _MyBody();
+}
+
+class _MyBody extends State<HomeTake_AwayPage> {
+  bool switchValueOne;
+  bool switchValueTwo;
+  void initState() {
+    setState(() {
+      switchValueOne = true;
+      switchValueTwo = false;
+    });
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Scaffold(
+        body: SafeArea(
       child: ListView(children: [
         Padding(
           padding: const EdgeInsets.only(
@@ -40,6 +55,72 @@ class HomeQueuePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Container(
+                                  width: 350,
+                                  height: 36,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Turn Take Away on/off",
+                                          style: TextStyle(
+                                              color: ArgonColors.text)),
+                                      Switch.adaptive(
+                                        value: switchValueOne,
+                                        onChanged: (bool newValue) => setState(
+                                            () => switchValueOne = newValue),
+                                        activeColor: ArgonColors.primary,
+                                      ),
+                                      // Switch.adaptive(
+                                      //   value: switchValueOne,
+                                      //   onChanged: (bool newValue) => setState(
+                                      //       () => switchValueOne = newValue),
+                                      //   activeColor: ArgonColors.primary,
+                                      // ),
+                                    ],
+                                  ),
+                                  // RaisedButton(
+                                  //     textColor: ArgonColors.primary,
+                                  //     color: Colors.yellowAccent,
+                                  //     onPressed: () {},
+                                  //     shape: RoundedRectangleBorder(
+                                  //         borderRadius:
+                                  //             BorderRadius.circular(30)),
+                                  //     child: Padding(
+                                  //         padding: EdgeInsets.only(
+                                  //             bottom: 10,
+                                  //             top: 10,
+                                  //             left: 0,
+                                  //             right: 0),
+                                  //         child: Row(
+                                  //           mainAxisAlignment:
+                                  //               MainAxisAlignment.spaceAround,
+                                  //           children: [
+                                  //             // Icon(
+                                  //             //     FontAwesomeIcons
+                                  //             //         .facebook,
+                                  //             //     size: 13),
+                                  //             SizedBox(
+                                  //               width: 0,
+                                  //             ),
+                                  //             Text(
+                                  //               "Stop all queues",
+                                  //               style: TextStyle(
+                                  //                   fontWeight: FontWeight.w600,
+                                  //                   fontSize: 14),
+                                  //             ),
+                                  //             // Icon(Icons.stop,
+                                  //             //     size: 13),
+                                  //           ],
+                                  //         ))),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 8.0, top: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                ),
+                                Container(
                                   width: 140,
                                   height: 36,
                                   child: RaisedButton(
@@ -47,7 +128,7 @@ class HomeQueuePage extends StatelessWidget {
                                       color: ArgonColors.secondary,
                                       onPressed: () {
                                         Navigator.pushReplacementNamed(
-                                            context, 'Queue add');
+                                            context, 'Add item');
                                       },
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -66,7 +147,7 @@ class HomeQueuePage extends StatelessWidget {
                                                 width: 5,
                                               ),
                                               Text(
-                                                "Add queue +",
+                                                "Add item +",
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w600,
                                                     fontSize: 14),
@@ -137,7 +218,7 @@ class HomeQueuePage extends StatelessWidget {
                           // needed
                           child: Row(
                             children: [
-                              Text("in-door 2 "),
+                              Text("double burger "),
                               FlatButton(
                                 onPressed: () {
                                   // Respond to button press
@@ -146,20 +227,9 @@ class HomeQueuePage extends StatelessWidget {
                                 },
                                 padding: const EdgeInsets.only(
                                     left: 4.0, top: 8, bottom: 8),
-                                child: Text("Accepet next"),
+                                child: Text("Accepet order"),
                                 color: Colors.green,
                               ),
-                              // FlatButton(
-                              //   onPressed: () {
-                              //     // Respond to button press
-                              //     Navigator.pushReplacementNamed(
-                              //         context, '/home');
-                              //   },
-                              //   padding: const EdgeInsets.only(
-                              //       left: 4.0, top: 8, bottom: 8),
-                              //   child: Text("stop"),
-                              //   color: Colors.yellow,
-                              // ),
                               FlatButton(
                                 onPressed: () {
                                   // Respond to button press
@@ -168,7 +238,7 @@ class HomeQueuePage extends StatelessWidget {
                                 },
                                 padding: const EdgeInsets.only(
                                     left: 4.0, top: 8, bottom: 8),
-                                child: Text("Delete"),
+                                child: Text("Decline order"),
                                 color: ArgonColors.error,
                               )
                             ],
@@ -184,7 +254,7 @@ class HomeQueuePage extends StatelessWidget {
                           // needed
                           child: Row(
                             children: [
-                              Text("in-door 2 "),
+                              Text("cheese burger"),
                               FlatButton(
                                 onPressed: () {
                                   // Respond to button press
@@ -193,20 +263,9 @@ class HomeQueuePage extends StatelessWidget {
                                 },
                                 padding: const EdgeInsets.only(
                                     left: 4.0, top: 8, bottom: 8),
-                                child: Text("Accepet next"),
+                                child: Text("Accepet order"),
                                 color: Colors.green,
                               ),
-                              // FlatButton(
-                              //   onPressed: () {
-                              //     // Respond to button press
-                              //     Navigator.pushReplacementNamed(
-                              //         context, '/home');
-                              //   },
-                              //   padding: const EdgeInsets.only(
-                              //       left: 4.0, top: 8, bottom: 8),
-                              //   child: Text("stop"),
-                              //   color: Colors.yellow,
-                              // ),
                               FlatButton(
                                 onPressed: () {
                                   // Respond to button press
@@ -215,98 +274,23 @@ class HomeQueuePage extends StatelessWidget {
                                 },
                                 padding: const EdgeInsets.only(
                                     left: 4.0, top: 8, bottom: 8),
-                                child: Text("Delete"),
+                                child: Text("Decline order"),
                                 color: ArgonColors.error,
                               )
-                            ],
-                          ))),
-                  Container(
-                      // height: MediaQuery.of(context).size.height * 0.35,
-                      color: kPrimaryLightColor,
-                      padding:
-                          const EdgeInsets.only(left: 8.0, top: 8, bottom: 8),
-                      child: InkWell(
-                          onTap: () {
-                            Navigator.pushReplacementNamed(context, '/home');
-                          },
-                          // needed
-                          child: Row(
-                            children: [
-                              Text("in-door 3 "),
-                              FlatButton(
-                                onPressed: () {
-                                  // Respond to button press
-                                  Navigator.pushReplacementNamed(
-                                      context, '/home');
-                                },
-                                padding: const EdgeInsets.only(
-                                    left: 4.0, top: 8, bottom: 8),
-                                child: Text("Accepet next"),
-                                color: Colors.green,
-                              ),
-                              Container(
-                                //width: 100.0,
-                                height: 40.0,
-                                decoration: new BoxDecoration(
-                                  // color: ArgonColors.white,
-                                  border: new Border.all(
-                                      color: Colors.red, width: 2.0),
-                                  borderRadius: new BorderRadius.circular(10.0),
-                                ),
-                                child: new Center(
-                                  child: new Text(
-                                    'Delete',
-                                    style: new TextStyle(
-                                        fontSize: 18.0, color: Colors.black),
-                                  ),
-                                ),
-                              ),
-                              // FlatButton(
-                              //   onPressed: () {
-                              //     // Respond to button press
-                              //     Navigator.pushReplacementNamed(
-                              //         context, '/home');
-                              //   },
-                              //   padding: const EdgeInsets.only(
-                              //       left: 4.0, top: 8, bottom: 8),
-                              //   child: Text("stop"),
-                              //   color: Colors.yellow,
-                              // ),
-                              TextButton(
-                                  child: Text("Delete".toUpperCase(),
-                                      style: TextStyle(fontSize: 14)),
-                                  style: ButtonStyle(
-                                      padding:
-                                          MaterialStateProperty.all<EdgeInsets>(
-                                              EdgeInsets.all(15)),
-                                      foregroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.black),
-                                      shape: MaterialStateProperty.all<
-                                              RoundedRectangleBorder>(
-                                          RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(18.0),
-                                              side:
-                                                  BorderSide(color: Colors.black)))),
-                                  onPressed: () => null),
-                              // FlatButton(
-                              //   onPressed: () {
-                              //     // Respond to button press
-                              //     Navigator.pushReplacementNamed(
-                              //         context, '/home');
-                              //   },
-                              //   padding: const EdgeInsets.only(
-                              //       left: 4.0, top: 8, bottom: 8),
-                              //   child: Text("Delete"),
-                              //   color: ArgonColors.error,
-                              // )
                             ],
                           ))),
                 ],
               )),
         ),
       ]),
-    );
+    ));
   }
+
+  // setState(bool Function() param0) {}
+
+  // @override
+  // State<StatefulWidget> createState() {
+  //   // TODO: implement createState
+  //   throw UnimplementedError();
+  // }
 }

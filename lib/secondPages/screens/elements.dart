@@ -1,387 +1,153 @@
-import 'package:GRSON/welcomePages/constants.dart';
+import 'package:GRSON/secondPages/widgets/navbar.dart';
 import 'package:flutter/material.dart';
-
 import 'package:GRSON/secondpages/theme/Theme.dart';
-
-//widgets
-import 'package:GRSON/secondpages/widgets/navbar.dart';
 import 'package:GRSON/secondpages/widgets/drawer.dart';
-import 'package:GRSON/secondpages/widgets/input.dart';
-import 'package:GRSON/secondpages/widgets/table-cell.dart';
+
+// import '../loginpage/sigin_page.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 
 class Elements extends StatefulWidget {
+  // final UserDetails detailsUser;
+  // ProfilePage({Key key, this.detailsUser}) : super(key: key);
   @override
-  _ElementsState createState() => _ElementsState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _ElementsState extends State<Elements> {
-  bool switchValueOne;
-  bool switchValueTwo;
-
-  void initState() {
-    setState(() {
-      switchValueOne = true;
-      switchValueTwo = false;
-    });
-    super.initState();
-  }
-
+class _ProfilePageState extends State<Elements> {
+  // final GoogleSignIn _googleSignIn = GoogleSignIn();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Navbar(
-          title: "Elements",
-        ),
-        backgroundColor: ArgonColors.bgColorScreen,
-        drawer: ArgonDrawer(currentPage: "Elements"),
-        body: SingleChildScrollView(
-            child: Padding(
-          padding: EdgeInsets.only(right: 24, left: 24, bottom: 36),
-          child: SafeArea(
-            bottom: true,
-            child: Column(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  // child: Text("Buttons",
-                  //     style: TextStyle(
-                  //         color: ArgonColors.text,
-                  //         fontWeight: FontWeight.w600,
-                  //         fontSize: 16)),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 34.0, right: 34.0, top: 16),
-                  child: FlatButton(
-                    textColor: ArgonColors.white,
-                    color: ArgonColors.primary,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    padding: EdgeInsets.all(20.0),
-                    child: Column(
-                      // Replace with a Row for horizontal icon + text
-                      children: <Widget>[Icon(Icons.add), Text("Add queue")],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                ),
-              ),
-              SizedBox(
-                // width: double.infinity,
-
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 160.0, right: 0.0, top: 0),
-                  child: FlatButton(
-                    textColor: ArgonColors.white,
-                    color: Colors.yellow,
-                    onPressed: () {
-                      // Respond to button press
-                      Navigator.pushReplacementNamed(context, '/home');
-                    },
-                    padding: EdgeInsets.all(10.0),
-                    child: Column(
-                      // Replace with a Row for horizontal icon + text
-                      children: <Widget>[
-                        Icon(Icons.stop),
-                        Text("stop all queues")
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 32),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                ),
-              ),
-              Container(
-                  color: kPrimaryLightColor,
-                  padding: const EdgeInsets.only(left: 8.0, top: 8, bottom: 8),
-                  child: InkWell(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(context, '/home');
-                      },
-                      // needed
-                      child: Row(
-                        children: [
-                          Text("in-door 2 "),
-                          FlatButton(
-                            onPressed: () {
-                              // Respond to button press
-                              Navigator.pushReplacementNamed(context, '/home');
-                            },
-                            padding: const EdgeInsets.only(
-                                left: 4.0, top: 8, bottom: 8),
-                            child: Text("Accepet next"),
-                            color: Colors.green,
-                          ),
-                          FlatButton(
-                            onPressed: () {
-                              // Respond to button press
-                              Navigator.pushReplacementNamed(context, '/home');
-                            },
-                            padding: const EdgeInsets.only(
-                                left: 4.0, top: 8, bottom: 8),
-                            child: Text("stop"),
-                            color: Colors.yellow,
-                          ),
-                          FlatButton(
-                            onPressed: () {
-                              // Respond to button press
-                              Navigator.pushReplacementNamed(context, '/home');
-                            },
-                            padding: const EdgeInsets.only(
-                                left: 4.0, top: 8, bottom: 8),
-                            child: Text("Delete"),
-                            color: ArgonColors.error,
-                          )
-                        ],
-                      )))
-
-              // SizedBox(
-              //   width: double.infinity,
-              //   child: Padding(
-              //     padding:
-              //         const EdgeInsets.only(left: 34.0, right: 34.0, top: 8),
-              //     child: RaisedButton(
-              //       textColor: ArgonColors.white,
-              //       color: ArgonColors.error,
-              //       onPressed: () {
-              //         // Respond to button press
-              //         Navigator.pushReplacementNamed(context, '/home');
-              //       },
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(4.0),
-              //       ),
-              //       child: Padding(
-              //           padding: EdgeInsets.only(
-              //               left: 16.0, right: 16.0, top: 12, bottom: 12),
-              //           child: Text("ERROR",
-              //               style: TextStyle(
-              //                   fontWeight: FontWeight.w600, fontSize: 16.0))),
-              //     ),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8.0, top: 32),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Typography",
-              //         style: TextStyle(
-              //             color: ArgonColors.text,
-              //             fontWeight: FontWeight.w600,
-              //             fontSize: 16)),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Heading 1",
-              //         style: TextStyle(fontSize: 44, color: ArgonColors.text)),
-              //   ),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("Heading 2",
-              //       style: TextStyle(fontSize: 38, color: ArgonColors.text)),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("Heading 3",
-              //       style: TextStyle(fontSize: 30, color: ArgonColors.text)),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("Heading 4",
-              //       style: TextStyle(fontSize: 24, color: ArgonColors.text)),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("Heading 5",
-              //       style: TextStyle(fontSize: 21, color: ArgonColors.text)),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("Paragraph",
-              //       style: TextStyle(fontSize: 16, color: ArgonColors.text)),
-              // ),
-              // Align(
-              //   alignment: Alignment.centerLeft,
-              //   child: Text("This is a muted paragraph.",
-              //       style: TextStyle(fontSize: 16, color: ArgonColors.muted)),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8.0, top: 32),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Inputs",
-              //         style: TextStyle(
-              //             color: ArgonColors.text,
-              //             fontWeight: FontWeight.w600,
-              //             fontSize: 16)),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 32.0),
-              //   child: Input(
-              //     placeholder: "Regular",
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Input(
-              //     placeholder: "Custom border",
-              //     borderColor: ArgonColors.info,
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Input(
-              //     placeholder: "Icon left",
-              //     prefixIcon: Icon(Icons.ac_unit),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Input(
-              //     placeholder: "Icon right",
-              //     suffixIcon: Icon(Icons.ac_unit),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Input(
-              //     placeholder: "Custom success",
-              //     borderColor: ArgonColors.success,
-              //     suffixIcon:
-              //         Icon(Icons.check_circle, color: ArgonColors.success),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Input(
-              //     placeholder: "Custom error",
-              //     borderColor: ArgonColors.error,
-              //     suffixIcon: Icon(Icons.error, color: ArgonColors.error),
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Switches",
-              //         style: TextStyle(
-              //             color: ArgonColors.text,
-              //             fontWeight: FontWeight.w600,
-              //             fontSize: 16)),
-              //   ),
-              // ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     Text("Switch is ON",
-              //         style: TextStyle(color: ArgonColors.text)),
-              //     Switch.adaptive(
-              //       value: switchValueOne,
-              //       onChanged: (bool newValue) =>
-              //           setState(() => switchValueOne = newValue),
-              //       activeColor: ArgonColors.primary,
-              //     ),
-              //   ],
-              // ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     Text("Switch is OFF",
-              //         style: TextStyle(color: ArgonColors.text)),
-              //     Switch.adaptive(
-              //       value: switchValueTwo,
-              //       onChanged: (bool newValue) =>
-              //           setState(() => switchValueTwo = newValue),
-              //       activeColor: ArgonColors.primary,
-              //     ),
-              //   ],
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Navigation",
-              //         style: TextStyle(
-              //             color: ArgonColors.text,
-              //             fontWeight: FontWeight.w600,
-              //             fontSize: 16)),
-              //   ),
-              // ),
-              // Navbar(
-              //   title: "Regular",
-              //   backButton: true,
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Navbar(
-              //       title: "Custom background",
-              //       backButton: true,
-              //       bgColor: ArgonColors.primary),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Navbar(
-              //     title: "Categories",
-              //     searchBar: true,
-              //     categoryOne: "Incredible",
-              //     categoryTwo: "Customization",
-              //     backButton: true,
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 16.0),
-              //   child: Navbar(
-              //     title: "Search",
-              //     searchBar: true,
-              //     backButton: true,
-              //   ),
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8.0, top: 32, bottom: 32),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Text("Table Cell",
-              //         style: TextStyle(
-              //             color: ArgonColors.text,
-              //             fontWeight: FontWeight.w600,
-              //             fontSize: 16)),
-              //   ),
-              // ),
-              // TableCellSettings(
-              //     title: "Manage Options in Settings",
-              //     onTap: () {
-              //       Navigator.pushNamed(context, '/pro');
-              //     }),
-            ]),
+      extendBodyBehindAppBar: true,
+      appBar: Navbar(
+        title: "Profile",
+        transparent: true,
+      ),
+      drawer: ArgonDrawer(currentPage: "Elements"),
+      body: new Stack(
+        children: <Widget>[
+          ClipPath(
+            child: Container(color: Colors.blue),
+            clipper: getClipper(),
           ),
-        )));
+          Positioned(
+            width: 375.0,
+            top: MediaQuery.of(context).size.height / 3.5,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  width: 150.0,
+                  height: 150.0,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://images.unsplash.com/photo-1516559828984-fb3b99548b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.all(Radius.circular(75.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 7.2,
+                            color: Colors.black,
+                            spreadRadius: 0.2)
+                      ]),
+                ),
+                SizedBox(height: 15.0),
+                Text(
+                  "Abdulrahman Alsarrani",
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                Text(
+                  "Abdulrahman.ALasrrani@gmail.com",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 40.0),
+                // Container(
+                //   height: 40.0,
+                //   width: 250.0,
+                //   child: Material(
+                //     borderRadius: BorderRadius.circular(20.0),
+                //     shadowColor: ArgonColors.white,
+                //     color: ArgonColors.white,
+                //     elevation: 7.0,
+                //     child: GestureDetector(
+                //       onTap: () {
+                //         Navigator.of(context).pop();
+                //         Navigator.of(context).pushReplacementNamed('/homepage');
+                //       },
+                //       child: Center(
+                //           child: Text(
+                //         'Continue',
+                //         style: TextStyle(
+                //             color: Colors.black87,
+                //             fontWeight: FontWeight.bold,
+                //             fontSize: 20),
+                //       )),
+                //     ),
+                //   ),
+                // ),
+                SizedBox(height: 40.0),
+                // Container(
+                //   height: 40.0,
+                //   width: 250.0,
+                //   child: Material(
+                //     borderRadius: BorderRadius.circular(20.0),
+                //     shadowColor: ArgonColors.white,
+                //     color: ArgonColors.white,
+                //     elevation: 7.0,
+                //     child: GestureDetector(
+                //       onTap: () {
+                //         // _googleSignIn.signOut();
+                //         // print('User Signed Out');
+                //         // Navigator.of(context).pop();
+                //         // FirebaseAuth.instance.signOut().then((value) {
+                //         //   Navigator.of(context)
+                //         //       .pushReplacementNamed('/landingpage');
+                //         // }).catchError((e) {
+                //         //   print(e);
+                //         // });
+                //       },
+                //       child: Center(
+                //           child: Text(
+                //         'Log Out',
+                //         style: TextStyle(
+                //             color: Colors.black87,
+                //             fontWeight: FontWeight.bold,
+                //             fontSize: 20),
+                //       )),
+                //     ),
+                //   ),
+                // )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class getClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = new Path();
+    path.lineTo(0.0, size.height / 2.0);
+    path.lineTo(size.width + 480, 0.0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return true;
   }
 }

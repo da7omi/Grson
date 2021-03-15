@@ -3,6 +3,8 @@ import 'dart:ui' show Color;
 class ArgonColors {
   static const Color black = Color(0xFF000000);
 
+  static const Color bcolor = Color(0xfffeb324);
+
   static const Color white = Color(0xFFFFFFFF);
 
   static const Color initial = Color.fromRGBO(23, 43, 77, 1.0);
